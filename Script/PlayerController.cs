@@ -229,7 +229,6 @@ namespace xyk.platform_Metroidvania
                 if (isGround || coyoteTimeCounter > 0)
                 {
                     myRigidbody.gravityScale = normalGravity;       //恢复正常重力(防止土狼跳时由于下落重力而跳不高)
-                    Debug.Log(normalGravity);
                     //人物向上跳跃，相当于带着水平速度向上跳，如果把x设置为0.0f，就是垂直上跳
                     Vector2 jumpVel = new Vector2(myRigidbody.velocity.x, jumpSpeed);
                     myRigidbody.velocity = jumpVel;
@@ -273,6 +272,13 @@ namespace xyk.platform_Metroidvania
 
 
 
+            }
+
+            // 检测跳跃键的松开状态，决定跳跃高度
+            if (Input.GetButtonUp("Jump") && myRigidbody.velocity.y > 0)
+            {
+                // 如果松开跳跃键，减少向上的速度，模拟短跳
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.5f);
             }
             // 更新土狼时间
             if (!isGround)
