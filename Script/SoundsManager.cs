@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:993dd6725c311e99c4cbacae336592db525a1560f47bc63855b80cec2874228e
-size 838
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SoundsManager : MonoBehaviour
+{
+    public static AudioSource audioSrc;
+    public static AudioClip pickCoin;
+    public static AudioClip throwCoin;
+    // Start is called before the first frame update
+    void Start()
+    {
+        audioSrc = GetComponent<AudioSource>();
+        pickCoin = Resources.Load<AudioClip>("PickCoin"); 
+        throwCoin = Resources.Load<AudioClip>("ThrowCoin");
+        audioSrc.PlayOneShot(pickCoin);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public static void PlayPickCoinClip()
+    {
+        audioSrc.PlayOneShot(pickCoin);
+    }
+
+    public static void PlayThrowCoinClip()
+    {
+        audioSrc.PlayOneShot(throwCoin);
+    }
+}

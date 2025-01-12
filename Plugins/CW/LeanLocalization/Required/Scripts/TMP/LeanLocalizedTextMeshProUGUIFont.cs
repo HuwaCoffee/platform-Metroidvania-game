@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:acde239fed1c1de8c78cd4e394733320d1829fc4a77acb12631c28bb42d9936b
-size 1366
+﻿using UnityEngine;
+using TMPro;
+
+namespace Lean.Localization
+{
+	/// <summary>This component will update a TextMeshProUGUI component's Font with a localized font, or use a fallback if none is found.</summary>
+	[ExecuteInEditMode]
+	[DisallowMultipleComponent]
+	[RequireComponent(typeof(TextMeshProUGUI))]
+	[AddComponentMenu(LeanLocalization.ComponentPathPrefix + "Localized TextMeshProUGUI Font")]
+	public class LeanLocalizedTextMeshProUGUIFont : LeanLocalizedBehaviour
+	{
+		[Tooltip("If PhraseName couldn't be found, this font asset will be used")]
+		public TMP_FontAsset FallbackFont;
+
+		// This gets called every time the translation needs updating
+		public override void UpdateTranslation(LeanTranslation translation)
+		{
+			// Get the TextMeshProUGUI component attached to this GameObject
+			var text = GetComponent<TextMeshProUGUI>();
+
+			// Use translation?
+			if (translation != null && translation.Data is TMP_FontAsset)
+			{
+				text.font = (TMP_FontAsset)translation.Data;
+			}
+			// Use fallback?
+			else
+			{
+				text.font = FallbackFont;
+			}
+		}
+
+		protected virtual void Awake()
+		{
+			// Should we set FallbackFont?
+			if (FallbackFont == null)
+			{
+				// Get the TextMeshProUGUI component attached to this GameObject
+				var text = GetComponent<TextMeshProUGUI>();
+
+				// Copy current text to fallback
+				FallbackFont = text.font;
+			}
+		}
+	}
+}

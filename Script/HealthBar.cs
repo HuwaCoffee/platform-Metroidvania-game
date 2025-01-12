@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b30388322ecc0bcbae5c76b549446470821ebfb147d1fb96ea7e7d1c32e8f01
-size 678
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class HealthBar : MonoBehaviour
+{
+    public Text healthText;
+    public static int HealthCurrent;
+    public static int HealthMax;
+
+    private Image healthBar;
+    // Start is called before the first frame update
+    void Start()
+    {
+        healthBar = GetComponent<Image>();
+        //HealthCurrent = HealthMax;
+    }
+
+    // Update is called once per frame.
+    void Update()
+    {
+        healthBar.fillAmount = (float)HealthCurrent / HealthMax;
+        healthText.text = HealthCurrent.ToString() + "/" + HealthMax.ToString();
+    }
+}

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f7419393a40adb70fbad1f55ea666f421cac4040a6a508367ef98b2b5db7b65
-size 560
+{
+    "name": "LeanLocalization.TMP",
+    "references": [
+        "LeanLocalization",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "__TEXTMESHPRO__"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "",
+            "define": "__TEXTMESHPRO__"
+        }
+    ],
+    "noEngineReferences": false
+}

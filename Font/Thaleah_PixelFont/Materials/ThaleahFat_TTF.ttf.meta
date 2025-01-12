@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87c2a2ab232c646ec14d13dc0c2054941384321929984fcf2fe1895eea6944c0
-size 475
+fileFormatVersion: 2
+guid: 585188cdc4600544eb408bee749e4b3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ThaleahFat
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

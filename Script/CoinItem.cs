@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:902ed68eefc36adde8318d44e284139766a06e3ba3335df16e80d4074daac73a
-size 657
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CoinItem : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            SoundsManager.PlayPickCoinClip();
+            CoinUI.CurrentCoinQuantity += 1;
+            Destroy(gameObject);
+        }
+    }
+}

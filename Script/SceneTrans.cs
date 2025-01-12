@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:286171a571e0f7fc6a719f554866a7a38d13f378fc6e536815e02bff85035c01
-size 750
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SceneTrans : MonoBehaviour
+{
+    public GameObject img1;
+    public GameObject img2;
+    public float time;
+    private Animator anim;
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("°´H");
+            anim.SetBool("ChangeToWhite", true);
+            Invoke("ChangeImag", time);
+        }
+        
+    }
+
+    //
+    void ChangeImag()
+    {
+        img1.SetActive(false);
+        img2.SetActive(true);
+    }
+}

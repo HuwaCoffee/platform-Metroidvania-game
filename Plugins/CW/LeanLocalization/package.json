@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:743ffcd21b671cf930d5237c3444971c7f3fe1b22609af73ab96a38fcc8f85ca
-size 362
+{
+	"displayName": "Lean Localization",
+	"description": "Lightweight localization for all projects.",
+	"name": "com.cwilkes.lean.localization",
+	"version": "1.0.0",
+	"unity": "2019.4",
+	"author": {
+		"name": "Carlos Wilkes",
+		"email": "carlos.wilkes@gmail.com",
+		"url": "https://carloswilkes.com"
+	},
+	"dependencies": {
+		"com.cwilkes.lean.common": "1.0.0"
+	}
+}

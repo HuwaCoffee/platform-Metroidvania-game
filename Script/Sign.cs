@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:abb872808e85ffe25c1d1d26f34b5b0ae3750a15e3502910d6a0cc619ad990d5
-size 1276
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class Sign : MonoBehaviour
+{
+    public GameObject dialogBox;     //膨胀箱
+    public Text dialogBoxText;
+    public string signText;
+    private bool isPlayerInSign=false;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E)&&isPlayerInSign)
+        {
+            dialogBox.SetActive(true);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //collision是触发器，即当前碰到的物体
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            dialogBoxText.text = signText;
+            isPlayerInSign = true;
+        }
+    } 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //collision是触发器，即当前碰到的物体
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            isPlayerInSign = false;
+            dialogBox.SetActive(false) ;
+        }
+    }
+}

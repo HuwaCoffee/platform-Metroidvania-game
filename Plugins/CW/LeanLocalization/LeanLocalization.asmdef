@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e809ca7fc41275b833f960eca4141d9c8da24d471a4ebcdcc329fd2784cc4ab1
-size 371
+{
+    "name": "LeanLocalization",
+    "references": [
+        "LeanCommon",
+        "CW.Common"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

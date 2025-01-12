@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6033cd8a7ef097264fae9284b8667d3055fe96117fef90dc1d21fa99ab3d8ceb
-size 538
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a2a791e0ffb554885467adbda44772, type: 3}
+  m_Name: GUIDE
+  m_EditorClassIdentifier: 
+  LongName: Lean Localization
+  ShortName: LeanLocalization
+  Documentation: {fileID: 4900000, guid: f1df6224418ffab4a826524335129c5b, type: 3}

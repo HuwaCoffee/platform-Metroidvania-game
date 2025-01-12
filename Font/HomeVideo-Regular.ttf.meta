@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:44de2a9736880e77f084db034a700fc99743a9fb2b28d61dac99ad232f4fbfba
-size 475
+fileFormatVersion: 2
+guid: f4a61b55ead7f264a84021a930487bb7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Home Video
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

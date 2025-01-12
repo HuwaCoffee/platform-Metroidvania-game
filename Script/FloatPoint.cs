@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b06ed1ff944b6ae78a3a951c7845ab43fadbbb0494c54e7d43889b2ff9890b78
-size 376
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FloatPoint : MonoBehaviour
+{
+    public float destroyTime;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Destroy(gameObject, destroyTime);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

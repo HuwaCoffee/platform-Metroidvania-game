@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41261a1fc715c3d9cf680e85d8fca4b750b3098aaf580568bd5f6603dce8f590
-size 483
+fileFormatVersion: 2
+guid: 2b6301ce137b9734ca685e3035f67822
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Source Han Sans SC
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

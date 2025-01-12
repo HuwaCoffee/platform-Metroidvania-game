@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ea1453a0da6ed2d40252713c154bfd1a1251ca1e3e2833e79f7c97e8644af49
-size 399
+INSTRUCTIONS
+
+Drag the "Sample Textmesh" prefab onto your scene.
+
+To resize font in Textmesh, use the "Character Size" attribute.
+To resize font in UI, use "Scale".
+
+
+STYLES
+
+OL = Outlined
+EX = Extruded
+HS = Hard Shadow
+
+
+
+LINKS
+
+Need support?
+https://twitter.com/pixelmush_
+
+If you like this package, please help me out and leave a rating here:
+http://u3d.as/v5t
+
+Want more fonts?
+http://u3d.as/w4v

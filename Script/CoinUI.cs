@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12d488cb616f53b6fdbfab206a1a2ad2c16158f85d1150eeea911f871cf86fba
-size 558
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CoinUI : MonoBehaviour
+{
+    public int startCoinQuantity;//初始金币
+    public Text coinQuantity;
+
+    public static int CurrentCoinQuantity;//当前数量
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        CurrentCoinQuantity = startCoinQuantity;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        coinQuantity.text = CurrentCoinQuantity.ToString();
+
+    }
+}

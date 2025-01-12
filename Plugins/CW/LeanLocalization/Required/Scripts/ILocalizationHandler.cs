@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6eaddc832c6de61bc8b23bfdbcaa569eb90144357504bdccb81c24e5ce3ace31
-size 653
+﻿namespace Lean.Localization
+{
+	/// <summary>This interface can be implemented by any component that needs to listen for localization changes.</summary>
+	public interface ILocalizationHandler
+	{
+		/// <summary>This method is called when initializing, or changing language.</summary>
+		void UpdateLocalization();
+
+		/// <summary>This method allows you to register the specified token.</summary>
+		void Register(LeanToken token);
+
+		/// <summary>This method allows you to unregister the specified token.</summary>
+		void Unregister(LeanToken token);
+
+		/// <summary>This method allows you to unregister all tokens.</summary>
+		void UnregisterAll();
+	}
+}

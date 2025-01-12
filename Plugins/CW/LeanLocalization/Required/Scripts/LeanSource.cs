@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3bb88734ba17e68af359aff9c7ec42d769610cc1f30bc7032865e802332388eb
-size 825
+﻿using UnityEngine;
+using System.Collections.Generic;
+
+namespace Lean.Localization
+{
+	/// <summary>This is the base class used for all translation sources. When a translation source is built, it will populate the <b>LeanLocalization</b> class with its translation data.</summary>
+	public abstract class LeanSource : MonoBehaviour
+	{
+		/// <summary>This allows you to register a token or language.</summary>
+		public virtual void Register()
+		{
+		}
+
+		/// <summary>This allows you to register a phrase based on the specified languages.</summary>
+		public virtual void Register(string primaryLanguage, string secondaryLanguage)
+		{
+		}
+
+		protected virtual void OnEnable()
+		{
+			LeanLocalization.DelayUpdateTranslations();
+		}
+
+		protected virtual void OnDisable()
+		{
+			LeanLocalization.DelayUpdateTranslations();
+		}
+	}
+}

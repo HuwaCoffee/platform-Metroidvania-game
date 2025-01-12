@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4612f7b76d4cd75959422f65db26a45f8806b631b50a8f8a29404c044e043a7b
-size 1045
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//无限背景
+public class BackGroundCycle : MonoBehaviour
+{
+    public GameObject mainCamera;
+    public float mapWidth; //地图宽度
+    public int mapNums;//地图重复次数
+
+    private float totalWidth;//总地图宽度
+    void Start()
+    {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        mapWidth = GetComponent<SpriteRenderer>().sprite.bounds.size.x;
+        totalWidth = mapWidth * mapNums;
+    
+    
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 currentPos = transform.position;
+        if (mainCamera.transform.position.x > transform.position.x + totalWidth / 2)
+        {
+            currentPos.x += totalWidth;
+            transform.position = currentPos;
+        }else if (mainCamera.transform.position.x < transform.position.x - totalWidth / 2)
+        {
+            currentPos.x -= totalWidth;
+            transform.position = currentPos;
+        }
+    }
+}

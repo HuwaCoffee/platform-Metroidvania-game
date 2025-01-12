@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e14ccdab3d46041b8afb00a925f4805afbf032440d4fc9b8fe352fff30218cc
-size 1448
+﻿using UnityEngine;
+
+namespace Lean.Localization
+{
+	/// <summary>This component will update a SpriteRenderer component with a localized sprite, or use a fallback if none is found</summary>
+	[ExecuteInEditMode]
+	[DisallowMultipleComponent]
+	[RequireComponent(typeof(SpriteRenderer))]
+	[HelpURL(LeanLocalization.HelpUrlPrefix + "LeanLocalizedSpriteRenderer")]
+	[AddComponentMenu(LeanLocalization.ComponentPathPrefix + "Localized SpriteRenderer")]
+	public class LeanLocalizedSpriteRenderer : LeanLocalizedBehaviour
+	{
+		[Tooltip("If PhraseName couldn't be found, this sprite will be used")]
+		public Sprite FallbackSprite;
+
+		// This gets called every time the translation needs updating
+		public override void UpdateTranslation(LeanTranslation translation)
+		{
+			// Get the SpriteRenderer component attached to this GameObject
+			var spriteRenderer = GetComponent<SpriteRenderer>();
+
+			// Use translation?
+			if (translation != null && translation.Data is Sprite)
+			{
+				spriteRenderer.sprite = (Sprite)translation.Data;
+			}
+			// Use fallback?
+			else
+			{
+				spriteRenderer.sprite = FallbackSprite;
+			}
+		}
+
+		protected virtual void Awake()
+		{
+			// Should we set FallbackSprite?
+			if (FallbackSprite == null)
+			{
+				// Get the SpriteRenderer component attached to this GameObject
+				var spriteRenderer = GetComponent<SpriteRenderer>();
+
+				// Copy current sprite to fallback
+				FallbackSprite = spriteRenderer.sprite;
+			}
+		}
+	}
+}

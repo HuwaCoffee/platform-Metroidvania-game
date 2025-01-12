@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:391348f6e45b0fc969248b189c886c75fdc467728ea9a665e1ba1a11cd25a753
-size 720
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class TrashBinCoin : MonoBehaviour
+{
+    public Text coinText;
+    public static int coinCurrent;
+    public static int coinMax;
+
+    private Image trashBinBar;
+    // Start is called before the first frame update
+    void Start()
+    {
+        trashBinBar = GetComponent<Image>();
+        coinCurrent = 0;
+        coinMax = 99;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        trashBinBar.fillAmount = (float)coinCurrent / (float)coinMax;  //更改Image组件的fill值
+        coinText.text = coinCurrent.ToString()+"/"+coinMax.ToString(); //更改文本值
+    }
+}

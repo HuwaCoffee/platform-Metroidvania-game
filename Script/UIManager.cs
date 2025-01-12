@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:535d952d532001255bd3fc5c5573a7b3136e4e4212237d85b615d133df4efebd
-size 920
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIManager : MonoBehaviour
+{
+    public RectTransform UI_Element;
+    public RectTransform CanvasRect;
+    public Transform trashBinPos;
+    public float xOffset;
+    public float yOffset;
+    public Text CoinNumber;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector2 viewportPos = Camera.main.WorldToViewportPoint(trashBinPos.position);
+        Vector2 worldObjectScreenPos = new Vector2(
+            (viewportPos.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.5f) + xOffset,
+            (viewportPos.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.5f) + yOffset
+        );
+        UI_Element.anchoredPosition = worldObjectScreenPos;
+    }
+}

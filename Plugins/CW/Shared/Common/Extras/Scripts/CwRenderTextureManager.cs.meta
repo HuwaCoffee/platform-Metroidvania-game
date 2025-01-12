@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3670cd6824d4ba1496425a989181623adf9389f9d00e946ab7437683a52093e
-size 454
+fileFormatVersion: 2
+guid: 074581640de185e4f9953ebbc6d61a87
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 26286
+  packageName: Paint in 3D
+  packageVersion: 3.0.2
+  assetPath: Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwRenderTextureManager.cs
+  uploadId: 595998

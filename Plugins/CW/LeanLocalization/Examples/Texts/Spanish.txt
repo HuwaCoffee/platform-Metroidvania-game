@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:285e82754f0f2fcd7c74b7e5d528cbdbb97b418dfca2453d0d13f5223d879d6b
-size 28
+﻿Title,"¡Hola!
+español"

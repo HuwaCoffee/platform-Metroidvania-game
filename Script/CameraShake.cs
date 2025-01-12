@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56f76e7a87147beb3bcbfaa99b6c2489dbf75db003d51cb7436c01c8bed237a8
-size 424
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraShake : MonoBehaviour
+{
+    public Animator camAnim;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Shake()
+    {
+        camAnim.SetTrigger("isShake");
+    }
+}
