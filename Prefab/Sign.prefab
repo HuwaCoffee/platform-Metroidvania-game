@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8570533262139544078}
   - component: {fileID: 8570533262139544079}
-  - component: {fileID: 8570533262139544076}
-  - component: {fileID: 8570533262139544077}
-  m_Layer: 14
+  - component: {fileID: 9130464040973262244}
+  m_Layer: 18
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,33 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8570533262139544076
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8570533262139544066}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.033219278, y: -0.06643844}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8272599, y: 0.8671231}
-  m_EdgeRadius: 0
---- !u!114 &8570533262139544077
+--- !u!114 &9130464040973262244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,9 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8570533262139544066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd8459f449ad7748a7dedf9ea3b5d57, type: 3}
+  m_Script: {fileID: 11500000, guid: fd61eacb5c29d194486aebc7d56ad063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogBoxText: {fileID: 0}
-  signText: "\u4F60\u597D\uFF0C\u63A2\u9669\u5BB6\uFF01\u6B22\u8FCE\u6765\u5230\u6211\u7684\u4E16\u754C\uFF01"
+  groundCheck: {fileID: 0}
+  checkRadius: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
