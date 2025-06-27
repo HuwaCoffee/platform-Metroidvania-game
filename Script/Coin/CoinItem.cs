@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CoinItem : MonoBehaviour
+{
+    // Start is called before the first frame update
+
+
+    private string poolTag="Coin";
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            SoundsManager.PlayPickCoinClip();
+            CoinUI.CurrentCoinQuantity += 1;
+            //Destroy(gameObject);
+            GameController.CoinNum+=1;
+            MultiObjectPool.Instance.ReturnObject(poolTag, gameObject);
+        }
+    }
+}

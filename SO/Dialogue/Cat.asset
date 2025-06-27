@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8a4a8b5efea38449b77c8d1e70f107, type: 3}
+  m_Name: Cat
+  m_EditorClassIdentifier: 
+  npcID: 0
+  dialogueNodes:
+  - dialogueLines:
+    - "\u6700\u8FD1\u597D\u50CF\u51FA\u73B0\u4E86\u4E0D\u5C11\u602A\u7269"
+    - "\u4F60\u8981\u5C0F\u5FC3\u55B5"
+    requireQuestComplete: 0
+    requiredQuest: 0
+  - dialogueLines:
+    - "\u5173\u6CE8\u6C38\u96CF\u5854\u83F2\u55B5~"
+    - "\u5173\u6CE8\u6C38\u96CF\u5854\u83F2\u8C22\u8C22\u55B5~"
+    requireQuestComplete: 0
+    requiredQuest: 0
+  - dialogueLines:
+    - "\u6CA1\u6709\u8981\u8BF4\u7684\u4E86..."
+    - "\u8D70\u5427\uFF01"
+    requireQuestComplete: 0
+    requiredQuest: 0
